@@ -1,0 +1,23 @@
+body{
+	font-family:100% Roboto;
+}
+
+#header{
+	height:450px;
+	width:1300px;
+	margin-left:25px;
+	margin-right:25px;
+}
+
+#logo{
+	width:100%;
+	height:100%;
+}
+
+#Menu{
+	width:700px;
+	margin-top: 5%;
+	font-size:100%;
+	font-family:sans-serif;
+	text-align: center;
+}
