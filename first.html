@@ -9,39 +9,63 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="CSS/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	</head>
 
 	<body>
-		<div id = "header">
-			<div class="container-fluid">
-				<div  class="col-md-4 col-sm-4 col-xs-4">
-					<img id="logo" src="source/image/Logo.png" class"image-responsive">
-				</div>
-				<div id="Menu" class="col-md-8 col-sm-8 col-xs-8">
-					<div class="col-md-2 col-sm-2 col-xs-2">
-						<p>Menu</p>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2">
-						<p>About Us</p>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2">
-						<p>Gallery</p>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2">
-						<p>Decorations</p>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2">
-						<p>Testimonials</p>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2">
-						<p>Contact Us</p>
-					</div>
-				</div>
+		<!--header-->
+		<div class="container-fluid">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<img id="logo" src="source/image/Logo.png" class"image-responsive">
+			</div>
+		</div>
+		<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+		</script>
+		<nav class="clearfix">
+				<ul class="clearfix">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Decorations</a></li>
+					<li><a href="#">Testimonial</a></li>
+					<li><a href="#">Contact Us</a></li>	
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+			
+		<div class="container-fluid">
+			<div class="col-lg-2 col-md-2 col-sm-1">
+			</div>
+			
+			<div id="contentbox" class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+
+			</div>
+
+			<div class="col-lg-2 col-md-2 col-sm-1">
 			</div>
 		</div>
 
 		<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-		<script src='https://ajak.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 		<script src='http://dimsemenov-static.s3.amazonaws.com/dist/jquery.magnific-popup.min.js'></script>
 	</body>
 
