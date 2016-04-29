@@ -13,14 +13,56 @@ body{
 	width:100%;
 	height:auto;
 }
+/*HEADER*/
 
-#contentbox{
+
+
+/*IMAGE SLIDER*/
+/*#contentbox{
 	height:400px;
 	margin-top:2%;
 	margin-bottom: 2%;
 	border: 1px solid black;
-}
-/*HEADER*/
+}*/
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  margin-bottom: 5%;
+  }
+/*IMAGE SLIDER*/
+
+
+
+
+
 
 /*MENU*/
 /* Clearfix */
@@ -47,6 +89,7 @@ nav {
 	font-weight: bold;
 	position: relative;
 	margin-top:5%;
+	margin-bottom: 2%;
 }
 nav ul {
 	padding: 0;
